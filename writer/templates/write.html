@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <!-- Page Title -->
+   <title> Scrize Dashboard</title>
+
+   <!-- Meta Data -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="{% static 'img/favicon.png'%}">
+
+   <!-- Web Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+   <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
+
+
+
+   <link rel="stylesheet" href="{% static 'plugins/perfect-scrollbar/perfect-scrollbar.min.css' %}">
+   <link rel="stylesheet" href="{% static 'fonts/icofont/icofont.min.css' %}">
+   <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static 'plugins/apex/apexcharts.css' %}">
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <link rel="stylesheet" href="{% static 'plugins/quill/katex.min.css' %}">
+     <link rel="stylesheet" href="{% static 'plugins/quill/monokai-sublime.min.css' %}">
+     <link rel="stylesheet" href="{% static 'plugins/quill/quill.snow.css' %}">
+     <link rel="stylesheet" href="{% static 'plugins/quill/quill.bubble.css' %}">
+
+   <!-- ======= END MAIN STYLES ======= -->
+
+</head>
+
+<body>
+         {% include "nav.html" %}
+
+         <!-- End Sidebar -->
+ <!-- Starts Main Wrapper -->
+
+<div class="main-content d-flex justify-content-center ">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+
+                    <form method="POST" id="myform">
+                     {% csrf_token %}
+
+                    <div class="form-element base-control mb-30 ">
+              <div class="row">
+                   <div class="col-xl-6">
+                              <label for="emailInput2" class="mb-2 black bold">Language</label>
+                                    <input type="text" class="theme-input-style" id="emailInput2" name="language" placeholder="English">
+                            </div>
+                            <div class="col-xl-6">
+                                <label for="disableSelect1" class="mb-2 bold d-block">Blog Category</label>
+                                    <div class="custom-select style--two disable">
+                                        <select class="theme-input-style" id="disableSelect1" name="category" >
+                                         <option value="headline" name="headline">Headline</option>
+                                            <option value="blogintro" name="blogintro">Blog Intro</option>
+                                            <option value="blogpara" name="blogpara">Blog Section</option>
+                                            <option value="blogcon" name="blogcon">Blog Conclusion</option>
+                                            <option value="translate" name="translate">Creative Story</option>
+                                            <option value="email" name="email">Video Description </option>
+                                            <option value="business" name="business">Product Description</option>
+                                        </select>
+                                    </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="form-group mb-4">
+                                    <label for="exampleTextarea1" class="mb-2 black bold d-block">Input keyword</label>
+                                    <textarea id="exampleTextarea1" class="theme-input-style" placeholder="How to write content" name="details"></textarea>
+                                </div>
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-block">Submit</button>
+                         </div>
+
+                        </div>
+
+                       </form>
+<textarea id="exampleTextarea1" class="theme-input-style" placeholder="Output" name="output"> {{ blogExpandedA }}</textarea>
+                    </div>
+                    <div class="col-lg-6" id="form">
+                    <section class="full-editor">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                <div class="card-header bg-white border-0 py-3">
+                                    <h4 class="card-title"> Editor</h4>
+                                </div>
+                                <div class="card-content collapse show">
+                                    <div class="card-body pt-0">
+                                    <p> You can edit your content here</p>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                        <div id="full-wrapper">
+                                            <div id="full-container">
+                                            <div class="editor" id="form">
+                                                <div>
+                                                {{ blogExpandedA }}
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+
+                    </div>
+
+            </div>
+</div>
+      <!-- End Main Wrapper -->
+
+
+      <!-- End Footer --><!-- End wrapper -->
+
+
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+
+   <script src="{% static 'js/jquery.min.js' %}"></script>
+   <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+         <script src="{% static 'js/script.js' %}"></script>
+   <script src="{% static 'plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+   <script src="{% static 'plugins/apex/custom-apexcharts.js' %}"></script>
+   <script src="{% static 'plugins/apex/apexcharts.min.js' %}"></script>
+   <script src="{% static 'plugins/quill/katex.min.js' %}"></script>
+   <script src="{% static 'plugins/quill/highlight.min.js' %}"></script>
+   <script src="{% static 'plugins/quill/quill.min.js' %}"></script>
+   <script src="{% static 'plugins/quill/custom-quill.js' %}"></script>
+
+
+
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+.dropdown-toggle::after {
+    display: none;
+  }
+.text-decoration-none{
+  text-decoration: none!important;
+}
+/* Font Awesome Icons have variable width. Added fixed width to fix that.*/
+.icon-width { width: 2rem;}
+
+body{
+    background-color: #E3E4E5;
+}
+
+.nav-link{
+    color: black;
+}
+.navbar{
+    background-color: transparent;
+}
+@supports ((position:-webkit-sticky) or (position:sticky))
+.sticky-top {
+    background:white !important;
+}
+
+.ctbutton {
+    width: 140px;
+    height: 45px;
+    margin-left: 10px;
+    padding: 10px;
+    background: #DD6275 !important;
+    color: aliceblue;
+    box-shadow:0px 14px 24px rgba(221, 98, 117, 0.7);
+    border-radius: 10px;
+}
+
+.hero{
+    background: url("/hero.png");
+    background-repeat: no-repeat, repeat;
+}
+
+.herofirst{
+    padding: 1rem;
+    max-height: 550px;
+    max-width: 850px;
+}
+.herosecond{
+    padding: 1rem;
+    margin-bottom: 5%;
+    max-height: 550px;
+    max-width: 850px;
+}
+
+.herofirst h2{
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 8%;
+}
+.herofirst p{
+    font-size: 1.4rem;
+    margin-bottom: 3%;
+
+}
+.herofirst a{
+margin: 10px;
+}
+
+.herosecond h2{
+    font-size: 5rem;
+    font-weight: 100;
+}
+.herosecond p{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+
+}
+p{
+    font-size: 1.4rem;
+}
+.herosecond a{
+margin: 10px;
+}
+.features{
+    padding: 2em 0;
+}
+
+
+.feature{
+    border-right: 1px solid black;
+}
+
+.feature h3{
+color: #5E779F;
+
+}
+
+.rewrite{
+    box-shadow: 0px 5px 20px rgba(33, 33, 44, 0.12);
+border-radius: 5px;
+}
+
+.btn-block{
+    width: 90%;
+}
+.card {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 1rem;
+}
+.card-header{
+    background-color: transparent;
+}
+.card.p-3.mt-3.box-shadow.second {
+    background: linear-gradient(180deg, #DD6275 0%, #5E779F 100%);
+    color: white;
+}
+
+.card.p-3.mt-3.box-shadow.second h2{
+    color: white;
+}
+.price li{
+    margin: 2rem 0;
+}
+
+.btn-lg {
+    padding: 1rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    border-color: transparent;
+}
+
+.container-fluid{
+    width: 90% !important;
+    margin-bottom: 5%;
+}
+h2.custom{
+    font-size: 5rem;
+    font-weight: 100;
+}
+.carousel {
+    margin-bottom: 1rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+  }
+  .carousel-item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+  }
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+
+  }
+  .navbar .container-fluid{
+    padding: 0 5px;
+}
+
+
+  @media (max-width: 600px){
+    .navbar{
+        background: #E3E4E5;
+    }
+    .herosecond h2{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    .herosecond p{
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    
+    }
+    .herosecond{
+        padding: 1rem;
+        margin-bottom: 10%;
+    }
+  }
+
+
+.color {
+    display: block;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: 0.8s ease;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.expanded {
+    width: 200%;
+    padding-bottom: 200%;
+    height: auto;
+}
+.color--blue {
+    background-color: #1b8bf9;
+    transition-delay: 0.25s;
+}
+.color--orange {
+    background-color: #ff6c19;
+    transition-delay: 0.5s;
+}
+.color--green {
+    background-color: #41ff9f;
+    transition-delay: 0.75s;
+}
+.color--white {
+    background-color: #f9f9f9;
+    transition-delay: 1s;
+}
+.btn {
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.8px;
+    background-color: #1b8bf9;
+    padding: 15px 50px;
+    border-radius: 5rem;
+    box-shadow: 1px 2.9px 16px rgba(27, 139, 249, 0.4);
+    transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+}
+.btn:hover {
+    box-shadow: 3px 4.9px 16px rgba(27, 139, 249, 0.6);
+    letter-spacing: 5px;
+}
+.btn--clicked {
+    transition: 0.6s cubic-bezier(0.01, 1.69, 0.99, 0.94);
+    padding: 15px 2px;
+    width: 50px;
+    color: transparent;
+    z-index: -10;
+}

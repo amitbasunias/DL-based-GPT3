@@ -1,0 +1,38 @@
+body{
+    background-color: #FCFDF2;
+}
+.payment-card{
+  position: relative;
+  margin: auto;
+  margin-top: 15%;
+  width: 50%;
+  border: 3px solid lightblue;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #CFFDE1;
+}
+.item-details{
+    margin: auto;
+    width: 50%;
+}
+.paypal-form{
+    margin: auto;
+    width: 50%;
+    position: relative;
+    left: 12%;
+}
+
+.item-details h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #3D5656;
+    text-align: center;
+}.item-details h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #3D5656;
+    text-align: center;
+}
+.item-details h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #3D5656;
+    text-align: center;
+}

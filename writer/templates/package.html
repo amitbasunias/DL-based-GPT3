@@ -1,0 +1,128 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <!-- Page Title -->
+   <title>Dashboard- Package</title>
+
+   <!-- Meta Data -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="../../../assets/img/favicon.png">
+
+   <!-- Web Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+   <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
+
+
+   <link rel="stylesheet" href="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/fonts/icofont/icofont.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/plugins/apex/apexcharts.css' %}">
+     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+   <!-- ======= END MAIN STYLES ======= -->
+
+</head>
+
+<body>
+         <!-- End Sidebar -->
+
+    {% include "nav.html" %}
+
+
+            <div class="main-content">
+                <div class="container-fluid">
+
+                    <div class="card">
+                        <div class="pt-40 px-3 px-sm-4 px-md-5 pb-3">
+                            <div class="row mb-5">
+                                <div class="col-xl-9">
+                                    <h3 class="mb-3">Choose a Plan</h3>
+                                    <p>Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero, vel pellentesque purus ultrices ut. In quis leo id massa pulvinar euismod cursus non justo. Sed sagittis et urna non efficitur. Nulla nec lacus tincidunt, rutrum arcu in, euismod diam.</p>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center pt-2">
+                                <div class="col-xl-11">
+                                    <div class="row justify-content-center">
+
+ {% for packages in p_list %}
+                                        <div class="col-xl-4 col-md-6">
+                                            <!-- Price Box -->
+                                            <div class="price-box mb-30">
+                                                <!-- Price Header -->
+                                                <div class="price-header d-flex flex-wrap enterprise">
+                                                    <div class="p_header-img">
+                                                        <img src="../../assets/img/svg/p_img3.svg" alt="">
+                                                    </div>
+                                                    <div class="p_header-content">
+
+                                                        <h4>{{ packages.name }}</h4>
+                                                        <h1>${{ packages.price }}</h1>
+                                                        <p>/{{ packages.cycle }}</p>
+                                        <p style="font-style: italic;"> {{ packages.limited_offer_desc }}</p>
+                                                    </div>
+                                                </div>
+                                                <!-- End Price Header -->
+
+                                                <!-- End Price Body -->
+                                                <div class="price-body">
+                                                    <h5 class="mb-3">Package Detail</h5>
+                                                    <ul class="list-unstyled mb-4">
+                                                            <li> <i class="icofont-check"></i> {{ packages.desc1 }}</li>
+                                                    <li> <i class="icofont-check"></i> {{ packages.desc2 }}</li>
+
+                                                    </ul>
+
+
+                                                    <a href="/checkout/{{packages.id}}" class="btn mt-10">Order Now</a>
+                                                </div>
+                                                <!-- End Price Body -->
+                                            </div>
+                                            <!-- End Price Box -->
+                                        </div>
+                                         {% endfor %}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+         </div>
+
+      <!-- End Main Wrapper -->
+
+
+      <!-- End Footer --><!-- End wrapper -->
+
+
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+
+
+
+
+
+
+   <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+   <script src="{% static 'assets/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+         <script src="{% static 'assets/js/script.js' %}"></script>
+   <script src="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+   <script src="{% static 'assets/plugins/apex/custom-apexcharts.js' %}"></script>
+   <script src="{% static 'assets/plugins/apex/apexcharts.min.js' %}"></script>
+
+   <!-- ======= BEGIN GLOBAL MANDATORY SCRIPTS ======= -->
+</body>
+
+</html>

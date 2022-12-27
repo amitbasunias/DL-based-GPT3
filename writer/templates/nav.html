@@ -1,0 +1,176 @@
+{% load static %}
+
+   <!-- Offcanval Overlay -->
+   <!-- Offcanval Overlay -->
+
+   <!-- Wrapper -->
+   <div class="wrapper">
+
+      <!-- Header -->
+      <header class="header white-bg fixed-top d-flex align-content-center flex-wrap">
+         <!-- Logo -->
+         <div class="logo">
+            <a href="/" class="default-logo"> <img src="{% static 'img/mobile-logo.png' %}"></a>
+            <a href="/" class="mobile-logo">Scrize</a>
+         </div>
+         <!-- End Logo -->
+
+         <!-- Main Header -->
+         <div class="main-header">
+            <div class="container-fluid">
+               <div class="row justify-content-between">
+                  <div class="col-3 col-lg-1 col-xl-4">
+                     <!-- Header Left -->
+
+                        </div>
+                        <!-- End Main Header User -->
+
+                        <!-- Main Header Menu --
+                        <!-- End Main Header Menu -->
+                     </div>
+                     <!-- End Header Left -->
+                  </div>
+                  <div class="col-9 col-lg-11 col-xl-8">
+                     <!-- Header Right -->
+                     <div class="main-header-right d-flex justify-content-end">
+
+                        <div class="main-header-user">
+                           <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+
+                              <div class="user-profile d-xl-flex align-items-center d-none">
+                                 <!-- User Avatar -->
+
+                                 <!-- End User Avatar -->
+
+                                 <!-- User Info -->
+                                 <div class="user-info">
+                                    <h4 class="user-name">{{user.email}}</h4>
+                                    <p> Remaining Credits: {{user.credit}}</p>
+                                 </div>
+                                 <!-- End User Info -->
+                              </div>
+                           </a>
+                           <div class="dropdown-menu">
+                              <a href="/profile">My Profile</a>
+                              <a href="/logout"> <i class="icofont-logout"></i> Log Out</a>
+                           </div>
+                        </div>
+                        <!-- End Main Header User -->
+
+                        <!-- Main Header Menu -->
+
+                        <div class="main-header-menu d-block d-lg-none">
+                           <div class="header-toogle-menu">
+                              <!-- <i class="icofont-navigation-menu"></i> -->
+                              <img src="{% static 'img/menu.png'%}" alt="">
+                           </div>
+                        </div>
+
+
+
+
+
+                                       <!-- End Item Single -->
+
+                                       <!-- Item Single -->
+
+                                       <!-- End Item Single -->
+
+                                       <!-
+                     <!-- End Header Right -->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- End Main Header -->
+      </header>
+      <!-- End Header -->
+
+      <!-- Main Wrapper -->
+      <div class="main-wrapper">
+         <!-- Sidebar -->
+         <nav class="sidebar" data-trigger="scrollbar">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header d-none d-lg-block">
+               <!-- Sidebar Toggle Pin Button -->
+               <div class="sidebar-toogle-pin">
+                  <i class="icofont-tack-pin"></i>
+               </div>
+               <!-- End Sidebar Toggle Pin Button -->
+            </div>
+            <!-- End Sidebar Header -->
+
+            <!-- Sidebar Body -->
+            <div class="sidebar-body">
+               <!-- Nav -->
+               <ul class="nav">
+                  <li class="nav-category">Main</li>
+                  <li>
+                     <a href="/dashboard">
+                        <i class="icofont-dashboard-web"></i>
+                        <span class="link-title">Dashboard</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/create">
+                        <i class="icofont-pen-nib"></i>
+                        <span class="link-title">Write</span>
+                     </a>
+
+                     <!-- End Sub Menu -->
+                  </li>
+                  <li>
+                     <a href="/history">
+                        <i class="icofont-list"></i>
+                        <span class="link-title">History</span>
+                     </a>
+
+                     <!-- End Sub Menu -->
+                  </li>
+                  <li class="nav-category">Payment</li>
+                  <li>
+                     <a href="/package">
+                  <i class="icofont-money"></i>
+                        <span class="link-title">Subscription</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="/profile">
+                        <i class="icofont-user-alt-2"></i>
+                        <span class="link-title">Profile</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="support">
+                         <i class="icofont-support"></i>
+                        <span class="link-title">Support </span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <!-- End Sub Menu -->
+                  </li>
+
+                   <li>
+                     <a href="/logout">
+                        <i class="icofont-logout"></i>
+                        <span class="link-title">Log out </span>
+                     </a>
+
+                     <!-- Sub Menu -->
+                     <!-- End Sub Menu -->
+                  </li>
+
+
+               <!-- End Nav -->
+            </div>
+            <!-- End Sidebar Body -->
+         </nav>
+         <!-- End Sidebar -->
+
+         <!-- Main Content -->
+
+      <!-- End Main Wrapper -->
+
+      <!-- End Footer -->
+   </div>
+   <!-- End wrapper -->

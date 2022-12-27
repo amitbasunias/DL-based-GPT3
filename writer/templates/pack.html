@@ -1,0 +1,63 @@
+                    <div class="card">
+                        <div class="pt-40 px-3 px-sm-4 px-md-5 pb-3">
+
+                                                        <div class="row ">
+                                <div class="col-xl-11">
+                                    <div class="row justify-content-center">
+                                    {% for packages in p_list %}
+
+                                        <div class="col-xl-4 col-md-6">
+                                            <!-- Price Box -->
+                                            <div class="price-box mb-30">
+                                                <!-- Price Header -->
+                                                <div class="price-header d-flex flex-wrap enterprise">
+                                                    <div class="p_header-img">
+                                                        <img src="../../assets/img/svg/p_img3.svg" alt="">
+                                                    </div>
+                                                    <div class="p_header-content">
+                                                        <h4>{{ packages.name }}</h4>
+                                                        <h1>${{ packages.price }}</h1>
+                                                        <p>/{{ packages.cycle }}</p>
+                                                        <p style="font-style: italic;"> {{ packages.limited_offer_desc }}</p>
+
+                                                    </div>
+                                                </div>
+                                                <!-- End Price Header -->
+
+                                                <!-- End Price Body -->
+                                                <div class="price-body">
+                                                    <h5 class="mb-3">Package Detail</h5>
+
+                                                    <ul class="list-unstyled mb-4">
+
+                                                      <li> <i class="icofont-check"></i> {{ packages.desc1 }}</li>
+                                                    <li> <i class="icofont-check"></i> {{ packages.desc2 }}</li>
+
+                                                    </ul>
+
+
+                                                    <a href="#" class="btn mt-10">Order Now</a>
+                                                </div>
+                                                <!-- End Price Body -->
+                                            </div>
+                                            <!-- End Price Box -->
+                                        </div>
+
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                      {% for note in view_note %}
+   <div class="cards">
+    <div class="card card-1">
+      <h2 class="card__title">{{note.title}}</h2>
+      <p class="card__apply">
+        <a class="card__link" href='/notes/{{note.id}}'>Open <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    {% endfor %}

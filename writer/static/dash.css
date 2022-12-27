@@ -1,0 +1,92 @@
+
+body{
+background: #F1F1F1;
+
+}
+
+.btn-secondary{
+ color: #fff;
+ background: #000;
+}
+
+.logindiv {
+margin-top: 1%;
+background: #fff;
+
+}
+
+
+.login h2 {
+color: black;
+margin: 2%;
+font-style: normal;
+font-weight: 700;
+font-size: 3em;
+}
+
+.loginform{
+padding: 20px 10px;
+
+}
+
+.formgroup{
+margin-top: 10px 0px;
+}
+
+label{
+color: #000;
+font-weight: 600;
+font-size: 1.2em;
+float: left;
+margin: 3% 8%;
+}
+
+.loginform input  {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+border-radius: 25px;
+border: 1px solid #CCCCCC
+}
+
+
+.loginform button {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+border-radius: 25px;
+border: 1px solid #CCCCCC;
+background: #000 !important;
+}
+.loginform a {
+color: #CCCCCC;
+
+}
+
+
+@media only screen and (min-width: 800px) {
+.logindiv {
+max-width: 450px;
+background: #fff;
+border-radius: 20px;
+margin: auto;
+}
+
+.login{
+margin: 10% auto;
+}
+
+}
+
+.alert{
+  padding: 7px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 20px;
+    width: 550px;
+    text-align: center;
+    position: relative;
+    left: 30%;
+}
