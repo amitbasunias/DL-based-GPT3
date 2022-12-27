@@ -135,8 +135,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'writer.UserAcc'
 
-STRIPE_PUBLISHABLE_KEY = 'pk_live_51KlnozHAS1nvjktlA9jQ6Qvoer7u9Glf78DJys9S36k63OvpvRS0YDUCia71MauGKPnGjKmmLWLMAC7jZE8dqecH00wNPqtWFq'
-STRIPE_SECRET_KEY = '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'
+STRIPE_PUBLISHABLE_KEY = 'pk_live_51KlnozHAS1nvjdsktlA9jQ6Qvoer7u9Glf78DJys9S36k63OvpvRS0YDUCia71MauGKPnGjKmmLWLMAC7jZE8dqecH00wNPqtWFq'
+STRIPE_SECRET_KEY = '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'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.mail.com'

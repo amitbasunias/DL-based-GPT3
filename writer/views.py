@@ -12,6 +12,7 @@ from django.template.loader import render_to_string
 from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
 from .beta import *
+from .models import ChatBot
 
 from django.http import JsonResponse, HttpResponse
 import json, string, random
