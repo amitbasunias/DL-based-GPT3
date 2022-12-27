@@ -359,3 +359,23 @@ def password_reset(request):
     else:
         password_reset_form = PasswordResetForm()
     return render(request, "reset.html", {'password_reset_form': password_reset_form,})
+
+def chatbot_view(request):
+    if request.method == "POST":
+        # Get the user input
+        user_input = request.POST.get("user_input")
+
+        # Use the openai module to generate a response
+        prompt = (f"{user_input}\n")
+        model_engine = "text-davinci-002"
+        prompt = (f"{prompt}")
+        completions = openai.Completion.create(engine=model_engine, prompt=prompt, max_tokens=2048, n=1,stop=None,temperature=0.5)
+        message = completions.choices[0].text
+        # Save the conversation to the database
+
+        current_user = request.user
+        ChatBot.objects.create(user=current_user, user_input=user_input, bot_response=message)
+    chatbot = ChatBot.objects.filter(user=request.user)
+
+    # Render the template
+    return render(request, "chatbot.html", {"chatbot": chatbot})

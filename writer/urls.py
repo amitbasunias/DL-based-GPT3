@@ -13,6 +13,7 @@ urlpatterns = [
     path('create/', views.create, name='create'),
     path('history/', views.history),
     path('package/', views.package),
+    path('chatbot/', views.chatbot_view, name='chatbot'),
     path('profile/', views.profile),
     path('getresult/', views.get_result),
     path('notes/<int:notes_id>/', views.notes_view, name='notes_view'),

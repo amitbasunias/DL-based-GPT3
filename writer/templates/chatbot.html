@@ -1,0 +1,97 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <!-- Page Title -->
+   <title>Dashboard</title>
+
+   <!-- Meta Data -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="../../../assets/img/favicon.png">
+
+   <!-- Web Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+   <!-- ======= BEGIN GLOBAL MANDATORY STYLES ======= -->
+
+
+   <link rel="stylesheet" href="{% static 'assets/plugins/perfect-scrollbar/perfect-scrollbar.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/fonts/icofont/icofont.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/plugins/apex/apexcharts.css' %}">
+     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+    <style>
+
+        .form-control {
+    background-color: #423c3c;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid black !important;
+}
+    </style>
+
+   <!-- ======= END MAIN STYLES ======= -->
+
+</head>
+
+<body>
+         <!-- End Sidebar -->
+
+    {% include "nav.html" %}
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+                <!-- Display the conversation history -->
+                {% for conversation in chatbot %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p class="card-text"><strong>You:</strong> {{ conversation.user_input }}</p>
+                            <p class="card-text"><strong>Bot:</strong> {{ conversation.bot_response }}</p>
+                            <button class="copy-button" data-clipboard-text="{{ conversation.bot_response }}">Copy</button>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!-- Chatbot form -->
+                <form method="post" action="{% url 'chatbot' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="user_input">Enter your message:</label>
+                        <input type="text" name="user_input" id="user_input" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+            <br>
+            <hr>
+            <br>
+        </div>
+    </div>
+
+{% if user.credit == 0 %}
+    <script>
+        document.querySelector('form').addEventListener('submit', event => {
+            event.preventDefault();
+            document.querySelector('form').insertAdjacentHTML('beforeend', '<p class="text-danger">You have no credit left. Add more credits to continue.</p>');
+        });
+    </script>
+{% endif %}
+<script>
+    document.querySelectorAll('.copy-button').forEach(button => {
+        button.addEventListener('click', event => {
+            navigator.clipboard.writeText(event.target.dataset.clipboardText);
+        });
+    });
+</script>
+</body>
+</html>

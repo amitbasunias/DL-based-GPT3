@@ -49,3 +49,9 @@ class dataset(models.Model):
 
     def __str__(self):
         return str(self.complex_text)
+
+class ChatBot(models.Model):
+    user = models.ForeignKey(UserAcc, on_delete=models.CASCADE, default=1)
+    user_input = models.TextField()
+    bot_response = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
