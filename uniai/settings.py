@@ -29,8 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://afikur-rahman1-refactored-computing-qgp6r5x9prj3gj7-8000.preview.app.github.dev',
-    'https://afikur-rahman1-refactored-computing-qgp6r5x9prj3gj7-8000.preview.app.github.dev/login/',
 ]
 
 # Application definition

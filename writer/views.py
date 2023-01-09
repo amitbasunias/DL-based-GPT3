@@ -203,28 +203,6 @@ def create(request):
 
         get_result(request)
 
-        #usertile = request.POST.get('usertitle')
-        #usertext = request.POST.get('userprompt')
-        #usertone = request.POST.get('tone')
-        #creativeness = request.POST.get('creativity')
-        #qa = request.POST.get('qa')
-        #aa = request.POST.get('aa')
-        #qb = request.POST.get('qb')
-        #num = request.POST.get('num')
-        #creatives= hello(creativeness)
-        #tone=utone(usertone)
-        #print(usertext)
-        #print(tone)
-        #print(creatives)
-        #aioutput= direction(usertile, usertext, tone, creatives, qa, aa, qb, num)
-        #print(aioutput)
-        #print(type(aioutput))
-
-        #data = { "aioutput": aioutput,}
-        #return HttpResponse(json.dumps(data))
-
-        #if request.method =='GET':
-            #return JsonResponse(data)
     return render(request, 'indexsec.html')
 
 def get_result(request):

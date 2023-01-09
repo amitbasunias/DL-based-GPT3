@@ -1,6 +1,6 @@
 import torch
 import nltk
-#nltk.download('averaged_perceptron_tagger')
+nltk.download('averaged_perceptron_tagger')
 #import os
 #os.chdir("/content/drive/MyDrive/Edit_NET")
 import writer.editnts as editnts
